@@ -2520,13 +2520,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@walkcat/contracts@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@walkcat/contracts@npm:1.1.0"
+"@walkcat/contracts@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@walkcat/contracts@npm:1.1.1"
   dependencies:
     "@nestjs/microservices": "npm:^11.1.24"
     rxjs: "npm:^7.8.2"
-  checksum: 10c0/8d876fcdf33b0f6e4c8993c7b6d7410dc48cca32e1d454be96344afa10199344c6d349b79be55076971f9bc66f20a48c63866626fa84e94bbad3293dbd6cd23f
+  checksum: 10c0/050073f848d975e3359c34985df1b8b32b924844c25ee3044898eb649490b77cc4d8d8e2a8fa472f5a39b362a81307f449fc45063911c732d56448485a09f1b6
   languageName: node
   linkType: hard
 
@@ -7349,7 +7349,7 @@ __metadata:
     "@types/node": "npm:^24.0.0"
     "@types/supertest": "npm:^7.0.0"
     "@walkcat/common": "npm:^1.0.1"
-    "@walkcat/contracts": "npm:^1.1.0"
+    "@walkcat/contracts": "npm:^1.1.1"
     "@walkcat/core": "npm:^1.0.4"
     amqp-connection-manager: "npm:^5.0.0"
     amqplib: "npm:^2.0.1"

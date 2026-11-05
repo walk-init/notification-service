@@ -1,5 +1,9 @@
 import { Injectable } from '@nestjs/common'
-import { OtpRequestedEvent } from '@walkcat/contracts'
+import {
+	EmailChangedEvent,
+	OtpRequestedEvent,
+	PhoneChangedEvent
+} from '@walkcat/contracts'
 
 import { MailService } from '../../infrastructure/mail/mail.service'
 import { SmsService } from '../../infrastructure/sms/sms.service'
@@ -19,5 +23,13 @@ export class NotificationsService {
 		if (type === 'phone') {
 			await this.smsService.sendOtpCode(identifier, code)
 		}
+	}
+	public async sendPhoneChange(data: PhoneChangedEvent): Promise<void> {
+		const { phone, code } = data
+		await this.smsService.sendPhoneChange(phone, code)
+	}
+	public async sendEmailChange(data: EmailChangedEvent): Promise<void> {
+		const { email, code } = data
+		await this.mailService.sendEmailChange(email, code)
 	}
 }

@@ -34,6 +34,15 @@ export class SmsService {
 			text: `Ваш код для входа в систему: ${code}`
 		})
 	}
+	public async sendPhoneChange(
+		phone: string,
+		code: string
+	): Promise<sendSmsInterfaces.SendSmsResponse> {
+		return this.send({
+			destination: phone,
+			text: `Ваш код подтверждения смены номера телефона: ${code}`
+		})
+	}
 
 	public async send(
 		data: sendSmsInterfaces.SendSmsRequest

@@ -20,13 +20,16 @@ export class MailService {
 			html
 		})
 	}
-	public async sendEmailReset(email: string, code: string): Promise<void> {
-		const html = await this.mailTemplateService.renderTemplate('email-reset', {
-			code
-		})
+	public async sendEmailChange(email: string, code: string): Promise<void> {
+		const html = await this.mailTemplateService.renderTemplate(
+			'email-changed',
+			{
+				code
+			}
+		)
 		await this.mailerService.sendMail({
 			to: email,
-			subject: 'СБРОС ПАРОЛЯ',
+			subject: 'ИЗМЕНЕНИЕ ЭЛЕКТРОННОЙ ПОЧТЫ',
 			html
 		})
 	}
